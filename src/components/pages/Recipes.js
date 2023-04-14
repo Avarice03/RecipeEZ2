@@ -51,7 +51,7 @@ function Recipes() {
       );
     }
     setRecipesCopy(selectedCategory);
-  }, [category, cuisine, recipes]);
+  }, [recipes]);
 
   // Function for removing category tags
   const deleteCategory = () => {

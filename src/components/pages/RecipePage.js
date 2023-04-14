@@ -9,10 +9,10 @@ import imagePlaceholder from "../images/photo.png";
 function RecipePage() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const [recipes, setRecipes] = useContext(RecipeContext);
-  const [admin, setAdmin] = useContext(UserContext);
+  const [recipes] = useContext(RecipeContext);
+  const [admin] = useContext(UserContext);
   // Data of the recipe clicked based on its id
-  const currentRecipe = recipes.filter((recipe) => recipe.id == id);
+  const currentRecipe = recipes.filter((recipe) => recipe.id === +id);
   // Remove the object from array
   const recipe = currentRecipe.shift();
 
@@ -58,7 +58,7 @@ function RecipePage() {
             </NavLink>
           </div>
           <div className="recipe-image">
-            <img src={recipe.image !== "" ? recipe.image : imagePlaceholder} alt="picture of recipe" />
+            <img src={recipe.image !== "" ? recipe.image : imagePlaceholder} />
           </div>
           <div className="recipe-instructions">
             <h2>Instructions:</h2>

@@ -540,4 +540,6 @@ export const RecipeProvider = (props) => {
     </RecipeContext.Provider>
   );
 };
-export default { RecipeContext, RecipeProvider };
+
+const recipeExport = { RecipeContext, RecipeProvider }
+export default recipeExport;
