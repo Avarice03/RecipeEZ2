@@ -9,8 +9,8 @@ import imagePlaceholder from "../images/photo.png";
 function RecipePage() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const [recipes] = useContext(RecipeContext);
-  const [admin] = useContext(UserContext);
+  const [recipes,] = useContext(RecipeContext);
+  const [admin,] = useContext(UserContext);
   // Data of the recipe clicked based on its id
   const currentRecipe = recipes.filter((recipe) => recipe.id === +id);
   // Remove the object from array

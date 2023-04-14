@@ -8,7 +8,7 @@ import RecipeButton from "../RecipeButton";
 // Recipes Home page for RecipeEZ
 function Recipes() {
   const [recipes, setRecipes] = useContext(RecipeContext);
-  const [admin] = useContext(UserContext);
+  const [admin,] = useContext(UserContext);
   const navigate = useNavigate();
   const [recipesCopy, setRecipesCopy] = useState(recipes);
   const [category, setCategory] = useState("All");
