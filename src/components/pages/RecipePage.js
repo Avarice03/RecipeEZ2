@@ -58,7 +58,7 @@ function RecipePage() {
             </NavLink>
           </div>
           <div className="recipe-image">
-            <img src={recipe.image !== "" ? recipe.image : imagePlaceholder} />
+            <img src={recipe.image !== "" ? recipe.image : imagePlaceholder} alt="placeholder"/>
           </div>
           <div className="recipe-instructions">
             <h2>Instructions:</h2>
