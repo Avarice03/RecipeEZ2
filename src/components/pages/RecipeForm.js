@@ -10,7 +10,7 @@ function RecipeForm() {
   const navigate = useNavigate();
   const [recipes, setRecipes] = useContext(RecipeContext);
   // Get the recipe that will be edited
-  const editedRecipe = recipes.find((recipe) => recipe.id === +id);
+  const editedRecipe = recipes.find((recipe) => recipe.id === id);
   const [name, setName] = useState(editedRecipe?.name || "");
   const [category, setCategory] = useState(editedRecipe?.category || "");
   const [servings, setServings] = useState(editedRecipe?.servings || "");
@@ -72,7 +72,7 @@ function RecipeForm() {
 
   // Function for saving changes and adding the edited or added item to the recipes array
   const saveChanges = (id, recipe) => {
-    const indexOfRecipe = recipes.findIndex((recipe) => recipe.id === +id);
+    const indexOfRecipe = recipes.findIndex((recipe) => recipe.id === id);
     const recipeCopy = [...recipes];
     recipeCopy.splice(indexOfRecipe, 1, recipe);
     setRecipes(recipeCopy);
